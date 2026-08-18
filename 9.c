@@ -22,3 +22,16 @@ pthread_join(t2, NULL);
 printf("All Threads Completed\n");
 return 0;
 }
+===============================================
+  Thread Executing : 1
+Thread Executing : 1
+Thread Executing : 2
+Thread Executing : 2
+Thread Executing : 3
+Thread Executing : 3
+Thread Executing : 4
+Thread Executing : 4
+Thread Executing : 5
+Thread Executing : 5
+All Threads Completed
+====================================================
