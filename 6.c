@@ -32,3 +32,9 @@ wait(NULL);
 sem_destroy(sem);
 return 0;
 }
+===================================================
+  Parent Process Entering Critical Section
+Parent Process Leaving Critical Section
+Child Process Entering Critical Section
+Child Process Leaving Critical Section
+==================================================
