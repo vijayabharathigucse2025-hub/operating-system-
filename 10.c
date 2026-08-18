@@ -37,3 +37,17 @@ printf("\nFrame Number : %d", frameNumber);
 printf("\nPhysical Address : %d\n", physicalAddress);
 return 0;
 }
+==========================================
+Enter Page Size: 100
+Enter Number of Pages: 3
+Enter Frame Numbers for Each Page:
+Page 0 -> Frame: 5
+Page 1 -> Frame: 2
+Page 2 -> Frame: 7
+Enter Logical Address: 250
+
+Page Number : 2
+Offset : 50
+Frame Number : 7
+Physical Address : 750
+=========================================================
