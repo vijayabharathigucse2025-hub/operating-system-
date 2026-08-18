@@ -1,0 +1,142 @@
+================================================================
+Ex. No: 1        INSTALLATION OF WINDOWS OPERATING SYSTEM
+================================================================
+
+NOTE: This experiment is a hands-on installation exercise performed on
+physical/virtual hardware using Windows installation media - it is not a
+compiled program. Below are the exact steps and verification commands
+from the procedure, followed by what each command's output looks like
+on a real Windows system after installation. (These command outputs are
+typical/representative examples for illustration, since Windows commands
+cannot be executed in this text environment - unlike Experiments 11-15
+which are C programs that were actually compiled and run.)
+
+----------------------------------------------------------------
+AIM
+----------------------------------------------------------------
+To install the Windows Operating System on a computer using bootable
+installation media and verify its successful operation.
+
+----------------------------------------------------------------
+PROCEDURE / "CODE" (Steps + Verification Commands)
+----------------------------------------------------------------
+
+Step 1: Create Bootable Installation Media
+ 1. Download the Windows ISO image from the Microsoft website.
+ 2. Insert a USB drive (minimum 8 GB capacity).
+ 3. Use a bootable media creation tool to create a bootable USB.
+
+Step 2: Configure Boot Settings
+ 1. Insert the bootable USB into the target computer.
+ 2. Restart the system and enter BIOS/UEFI setup.
+ 3. Set the USB drive as the first boot device.
+ 4. Save the settings and restart.
+
+Step 3: Install Windows
+ 1. Boot from the USB drive.
+ 2. Select language, time, and keyboard settings.
+ 3. Click Install Now.
+ 4. Enter the product key if available.
+ 5. Accept the license agreement.
+ 6. Select Custom: Install Windows Only.
+ 7. Create or select a partition for installation.
+ 8. Click Next to begin installation.
+
+Step 4: Initial Configuration
+ 1. Wait for installation to complete.
+ 2. Configure region and keyboard settings.
+ 3. Create a user account and password.
+ 4. Complete privacy and network settings.
+
+Step 5: Verification
+ 1. Log in to Windows.
+ 2. Verify the installation using system information commands.
+ 3. Check the operating system version and hardware details.
+
+----------------------------------------------------------------
+COMMANDS USED (run in Command Prompt after installation)
+----------------------------------------------------------------
+1. Display Windows Version
+   winver
+
+2. Display System Information
+   systeminfo
+
+3. Display Computer Name
+   hostname
+
+4. Display Disk Information
+   diskpart
+   list disk
+
+5. Check Windows Activation Status
+   slmgr /xpr
+
+6. Display IP Configuration
+   ipconfig
+
+
+================================================================
+                        OUTPUT
+================================================================
+(Typical output produced by each verification command on a
+successfully installed Windows system)
+
+----------------- winver -----------------
+Opens the "About Windows" dialog box showing:
+  Microsoft Windows
+  Version 23H2 (OS Build 22631.xxxx)
+
+----------------- systeminfo -----------------
+Host Name:                 DESKTOP-XXXXXXX
+OS Name:                   Microsoft Windows 11 Pro
+OS Version:                10.0.22631 N/A Build 22631
+System Manufacturer:       (Vendor Name)
+System Model:              (Model Name)
+System Type:                x64-based PC
+Total Physical Memory:      16,384 MB
+BIOS Version:                (Version Info)
+
+----------------- hostname -----------------
+DESKTOP-XXXXXXX
+
+----------------- diskpart / list disk -----------------
+Microsoft DiskPart version 10.0.22631
+
+DISKPART> list disk
+
+  Disk ###  Status         Size     Free     Dyn  Gpt
+  --------  -------------  -------  -------  ---  ---
+  Disk 0    Online          476 GB      0 B        *
+
+----------------- slmgr /xpr -----------------
+Windows(R), Professional edition:
+The machine is permanently activated.
+
+----------------- ipconfig -----------------
+Windows IP Configuration
+
+Ethernet adapter Ethernet:
+   Connection-specific DNS Suffix  . :
+   IPv4 Address. . . . . . . . . . . : 192.168.1.10
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.1.1
+
+----------------------------------------------------------------
+INFERENCE
+----------------------------------------------------------------
+- The Windows Operating System was successfully installed using
+  bootable media.
+- System configuration settings were completed successfully.
+- The installed operating system was verified using Windows
+  command-line utilities.
+- Hardware and network configurations were detected correctly by
+  the operating system.
+
+----------------------------------------------------------------
+RESULT
+----------------------------------------------------------------
+The Windows Operating System was successfully installed and
+configured on the computer. The installation was verified using
+system commands, and the system was found to be functioning
+properly.
