@@ -10,3 +10,9 @@ echo "$b is greater"
 else
 echo "$c is greater"
 fi
+
+=========================
+ENTER THREE NUMBERS
+5 3 2
+5 is greater
+=========================
