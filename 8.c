@@ -91,3 +91,23 @@ printf("No Deadlock Detected");
 }
 printf("\n");
 return 0; }
+==================================================
+  Enter Number of Processes: 3
+Enter Number of Resource Types: 3
+
+Enter Allocation Matrix:
+1 0 0
+0 1 0
+0 0 1
+
+Enter Request Matrix:
+0 1 0 
+0 0 1
+1 0 0
+
+Enter Available Resources:
+0 0 0
+
+Deadlocked Processes:
+P0 P1 P2 
+===================================================
