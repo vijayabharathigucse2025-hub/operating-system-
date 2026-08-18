@@ -27,3 +27,13 @@ printf("\nParent's Parent PID : %d\n", getppid());
 }
 return 0;
 }
+
+=================
+  CHILD PROCESS
+Child PID : 33
+Parent PID : 32
+
+PARENT PROCESS
+Parent PID : 32
+Parent's Parent PID : 13
+=====================================
