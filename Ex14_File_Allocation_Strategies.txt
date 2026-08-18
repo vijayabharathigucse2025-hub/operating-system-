@@ -1,0 +1,104 @@
+================================================================
+Ex. No: 14        FILE ALLOCATION STRATEGIES
+       (Sequential, Indexed, Linked)
+================================================================
+
+----------------------------------------------------------------
+PROGRAM A: SEQUENTIAL FILE ALLOCATION
+----------------------------------------------------------------
+#include <stdio.h>
+int main()
+{
+ int start, length, i;
+ printf("Enter Starting Block: ");
+ scanf("%d", &start);
+ printf("Enter File Length (Number of Blocks): ");
+ scanf("%d", &length);
+ printf("\nAllocated Blocks:\n");
+ for(i = 0; i < length; i++)
+ {
+ printf("%d ", start + i);
+ }
+ printf("\n");
+ return 0;
+}
+
+----------------------------------------------------------------
+PROGRAM B: INDEXED FILE ALLOCATION
+----------------------------------------------------------------
+#include <stdio.h>
+int main()
+{
+ int n, indexBlock, blocks[20], i;
+ printf("Enter Index Block: ");
+ scanf("%d", &indexBlock);
+ printf("Enter Number of Blocks: ");
+ scanf("%d", &n);
+ printf("Enter Block Numbers:\n");
+ for(i = 0; i < n; i++)
+ {
+ scanf("%d", &blocks[i]);
+ }
+ printf("\nIndex Block : %d\n", indexBlock);
+ printf("Allocated Blocks : ");
+ for(i = 0; i < n; i++)
+ {
+ printf("%d ", blocks[i]);
+ }
+ printf("\n");
+ return 0;
+}
+
+----------------------------------------------------------------
+PROGRAM C: LINKED FILE ALLOCATION
+----------------------------------------------------------------
+#include <stdio.h>
+int main()
+{
+ int n, blocks[20], i;
+ printf("Enter Number of Blocks: ");
+ scanf("%d", &n);
+ printf("Enter Block Numbers:\n");
+ for(i = 0; i < n; i++)
+ {
+ scanf("%d", &blocks[i]);
+ }
+ printf("\nLinked Allocation:\n");
+ for(i = 0; i < n - 1; i++)
+ {
+ printf("%d --> ", blocks[i]);
+ }
+ printf("%d --> NULL\n", blocks[n - 1]);
+ return 0;
+}
+
+
+================================================================
+                        OUTPUT
+================================================================
+
+----------------- SEQUENTIAL ALLOCATION OUTPUT -----------------
+Input : Starting Block = 10, File Length = 5
+Enter Starting Block: Enter File Length (Number of Blocks):
+
+Allocated Blocks:
+10 11 12 13 14
+
+----------------- INDEXED ALLOCATION OUTPUT -----------------
+Input : Index Block = 20, Number of Blocks = 5, Block Numbers = 10 11 12 13 14
+Enter Index Block: Enter Number of Blocks: Enter Block Numbers:
+
+Index Block : 20
+Allocated Blocks : 10 11 12 13 14
+
+----------------- LINKED ALLOCATION OUTPUT -----------------
+Input : Number of Blocks = 5, Block Numbers = 10 25 30 45 50
+Enter Number of Blocks: Enter Block Numbers:
+
+Linked Allocation:
+10 --> 25 --> 30 --> 45 --> 50 --> NULL
+
+RESULT
+Thus, the programs to implement Sequential, Indexed, and Linked File
+Allocation strategies were executed successfully using C programming, and
+the outputs were verified.
